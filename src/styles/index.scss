@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+* {
+    font-family: "Inter", sans-serif;
+    font-family: "Montserrat", sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    min-width: 500px;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 10px 20px;
+    box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.2509803922);
+    border-radius: 20px;
+}
+
+.block__search {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2px 10px;
+
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        
+
+        li {
+            a {
+                font-size: 16px;
+                font-weight: 600;
+                color: #000;
+                border-radius: 12px;
+                transition: all 0.2s;
+
+                &:hover {
+                    color: #E31E24;
+                }
+
+                &:active {
+                    background: #F9D2D3;
+                    padding: 12px 10px;
+                }
+            }
+            
+        }
+    }
+}
+
+.content__search {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border: 1px solid #f3f3f3;
+    border-radius: 20px;
+    background-color: white;
+    
+  
+    input {
+      width: 100%;
+      outline: none;
+      border: 0;
+      margin-left: 14px;
+      text-transform: capitalize;
+  
+      &::placeholder {
+        color: #c4c4c5;
+      }
+    }
+}
+
+.menuCategory {
+    padding: 25px 15px;
+    h2 {
+        font-size: 32px;
+        font-weight: 700;
+        margin-bottom: 12px;
+    }
+}
+
+.menuList {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.menu__card {
+    width: 217px;
+    display: flex;
+    padding: 12px;
+    position: relative;
+    border-radius: 24px;
+    box-shadow: 0px 14px 30px 0px #0000000D;
+    flex-direction: column;
+
+    .menu__img {
+        display: flex;
+        justify-content: center;
+        height: 168px;
+
+        img {
+            width: 100%;
+            height: 168px;
+            border-radius: 20px;
+        }
+    }
+
+    .menu__card__text {
+        margin-top: 14px;
+
+        h3 {
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #21201F
+        }
+
+        h4 {
+            margin-top: 4px;
+            font-size: 15px;
+            font-weight: 500;
+            height: 45px;
+        }
+
+        p {
+            margin: 5px 0;
+            color: #9E9B98;
+        }
+    }
+
+    .Btn__addToCard {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(92,90,87,0.1);
+        border-radius: 16px;
+        padding: 14px;
+    
+        &:active{
+            background-color: darken($color: rgba(92,90,87,0.1), $amount: 70);
+        }
+        
+        span {
+            font-size: 15px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+    }
+}
+
+
+.phoneInput {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+
+    .phoneNum {
+        &::placeholder {
+            font-size: 18px;
+        }
+    }
+}
+
+.phoneCodePage {
+    position: absolute;
+    top: 30vh;
+    left: 70vh;
+    z-index: 100;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(87, 85, 82, 0.723);
+    border-radius: 20px;
+    color: #fff;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+        .phoneCodePage__title {
+            font-weight: 500;
+            font-size: 20px;
+        }
+
+        .phoneCodePage__input {
+            width: 100px;
+            padding: 10px;
+            font-size: 20px;
+            text-align: center;
+
+            &::placeholder {
+                color: #fff;
+            }
+        }
+    }
+    
+}
+
+.cart__element {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 20px;
+    margin-bottom: 20px;
+    border: 1px solid #f3f3f3;
+    border-radius: 20px;
+
+    img {
+        width: 100px;
+        height: 85px;
+        border-radius: 20px;
+    }
+
+    .cart__element__text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+
+        .cart__element__title {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+            font-size: 15px;
+
+            .cart__element__price {
+                font-weight: 700;
+            }
+
+            
+        }
+
+        
+    }
+}
+
+.cart__element__amount {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    .changeCountItems {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #9E9B98;
+        padding: 5px 10px;
+        border-radius: 10px;
+
+        img {
+            text-align: center;
+            width: 15px;
+            height: 15px;
+        }
+
+        &:active {
+            background-color: darken($color: #9E9B98, $amount: 10);
+        }
+    }
+}
+
+.orderPage {
+    padding: 25px;
+
+    h2 {
+        font-size: 25px;
+        font-weight: 700;
+        margin-bottom: 25px;
+    }
+
+    .orderList {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .orderPrice {
+        font-size: 21px;
+        font-weight: 600;
+
+        span {
+            font-size: 20px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+    }
+
+    .timeOfDelivery {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        gap: 10px;
+        margin-top: 30px;
+        p {
+            font-size: 21px;
+            font-weight: 600;
+        }
+
+        .deliveryTimePicker {
+            width: 350px;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+            background-color: #9E9B98;
+            border-radius: 20px;
+            input {
+                text-align: center;
+                width: 300px;
+                font-weight: 600;
+            }
+        }
+    }
+
+    .block__createOrder {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
+
+.btn__createOrder {
+    width: 30%;
+    background-color: #000;
+    border-radius: 16px;
+    padding: 14px;
+    color: #fff;
+}
+
+.orderPlaced__block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 200px 0;
+
+    .orderPlaced {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    h2 {
+        margin-bottom: 0;
+    }
+
+    .btn__createOrder {
+        text-align: center;
+        margin-top: 50px;
+    }
+}
+
+
+
