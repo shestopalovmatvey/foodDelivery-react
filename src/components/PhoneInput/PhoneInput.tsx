@@ -13,7 +13,9 @@ export default function PhoneInput({ setIsValid }: PhoneInputProps) {
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const value = evt.currentTarget.value;
     setPhoneNumber(value);
-    setIsValid(phonePattern.test(value));
+    if (phonePattern.test(value)) {
+      setIsValid((prev) => !prev)
+    }
   };
 
   return (
@@ -29,4 +31,4 @@ export default function PhoneInput({ setIsValid }: PhoneInputProps) {
       />
     </div>
   );
-};
+}

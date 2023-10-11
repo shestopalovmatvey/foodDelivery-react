@@ -1,5 +1,4 @@
 export interface IDish {
-    ruduce(arg0: (sum: number, item: IDish) => any): unknown;
     id_dish: number;
     name: string;
     description: string;
@@ -17,3 +16,12 @@ export interface IMenuCategory {
 export interface IMenuState {
     menuData: IMenuCategory[] | null;
 }
+
+export type IStringIndex = {
+    'Холодные закуски': string;
+    'Салаты': string;
+    'Супы': string;
+    'Горячие блюда': string;
+    'Десерты': string;
+  };
+  

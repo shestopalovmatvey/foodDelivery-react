@@ -1,16 +1,16 @@
-import {createSlice} from "@reduxjs/toolkit";
-import { IMenuState } from "../../type";
+import {PayloadAction, createSlice} from "@reduxjs/toolkit";
+import { IMenuCategory, IMenuState } from "../../type";
 
-const initialState: IMenuState = {
-    menuData: null
+const initialState: IMenuState =  {
+    menuData: []
 }
 
 const menuData = createSlice({
     name: 'menu',
     initialState,
     reducers: {
-        setData: (state, action) => {
-            return action.payload
+        setData: (state, action: PayloadAction<IMenuCategory[]>) => {
+            state.menuData = action.payload;
         }
     }
 })
