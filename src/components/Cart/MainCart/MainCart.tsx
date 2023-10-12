@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import style from '../Cart.module.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { toggleValue } from '../../../redux/cartDrawer/cartDrawer.slice'
@@ -6,18 +6,22 @@ import CartItem from '../CartItem/CartItem'
 import { IDish } from '../../../type'
 import PhoneInput from '../../PhoneInput/PhoneInput'
 import { useNavigate } from 'react-router-dom';
+import { RootState } from '../../../redux/store'
 
 export default function MainCart() {
-    const {cartItems} = useSelector(store => store)
+    const {cartItems} = useSelector((store: RootState) => store)
     const [isValid, setIsValid] = useState<boolean>(true);
     const dispatch = useDispatch()
     const navigate  = useNavigate()
+    
     return (
         <div className={style.overlay}>
                     <div className={(cartItems.length === 0 ? style.cartEmpty : style.cart)}>
                         <div className={style.cart__title}>
                             <h3>Корзина</h3>
-                            <button onClick={() => dispatch(toggleValue())}>
+                            <button onClick={() => 
+                                dispatch(toggleValue())
+                            }>
                                 <img width={32} height={32} src="images/delete.svg" alt="deleteItem" />
                             </button>
                         </div>

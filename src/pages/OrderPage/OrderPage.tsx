@@ -1,18 +1,21 @@
 import { useState } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import CartItem from '../../components/Cart/CartItem/CartItem'
 import DeliveryTimePicker from '../../components/DeliveryTimePicker/DeliveryTimePicker'
 import { Link } from 'react-router-dom'
 import { IDish } from '../../type'
 import { RootState } from '../../redux/store'
+import { cleanCart } from '../../redux/cartItems/cartItems.slice'
 
 export default function OrderPage() {
+    const dispatch = useDispatch()
     const {cartItems, timeOrder} = useSelector((store: RootState) => store)
     const finallPrice: number = cartItems.reduce((sum: number, elem: IDish) => sum += elem.price, 0)
     const [orderPlaced, setOrderPlaced] = useState<boolean>(false)
     const handlerCreateOrder = () => {
         if (cartItems.length > 0 && timeOrder !== null) {
             setOrderPlaced((prev) => !prev)
+            dispatch(cleanCart())
         }
     }
     return (

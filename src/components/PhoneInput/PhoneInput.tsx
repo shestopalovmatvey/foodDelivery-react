@@ -8,7 +8,7 @@ type PhoneInputProps = {
 export default function PhoneInput({ setIsValid }: PhoneInputProps) {
   const [phoneNumber, setPhoneNumber] = useState("");
 
-  const phonePattern = /^\+\d{1,3} \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
+  const phonePattern = /^\+\d{1} \(\d{3}\) \d{3}-\d{2}-\d{2}$/;
 
   const handleChange = (evt: React.ChangeEvent<HTMLInputElement>) => {
     const value = evt.currentTarget.value;

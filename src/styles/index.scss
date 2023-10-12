@@ -5,9 +5,16 @@
     font-family: "Montserrat", sans-serif;
 }
 
+$primary-bg-light: #f0f0f0;
+$primary-bg-dark: #333; 
+$primary-text-light: #333;
+$primary-text-dark: #f0f0f0;
+
+
 html {
     scroll-behavior: smooth;
 }
+
 
 .wrapper {
     min-width: 500px;

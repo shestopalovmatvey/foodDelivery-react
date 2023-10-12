@@ -1,3 +1,5 @@
+@use '../../styles/index.scss' as *;
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -5,6 +7,16 @@
     padding: 10px 0px;
     margin-top: 10px;
     margin-bottom: 15px;
+}
+
+.header__dark {
+    background-color: $primary-bg-dark;
+    color: $primary-text-dark;
+}
+
+.header__light {
+    background-color: $primary-bg-light;
+    color: $primary-text-light;
 }
 
 .header__logo {

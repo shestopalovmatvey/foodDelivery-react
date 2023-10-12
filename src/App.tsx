@@ -3,7 +3,6 @@ import MainPage from './pages/MainPage/MainPage'
 import PhoneCodePage from './pages/PhoneCodePage/PhoneCodePage'
 import OrderPage from './pages/OrderPage/OrderPage'
 
-
 function App() {
   return (
     <div className='wrapper'>
